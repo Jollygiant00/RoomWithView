@@ -37,6 +37,5 @@ public class Word {
 
         @Query("SELECT * FROM word_table ORDER BY word ASC")
         List<Word> getAllWords();
-
     }
 }
