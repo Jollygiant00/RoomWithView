@@ -1,5 +1,6 @@
 package com.example.android.roomwithview;
 
+import android.arch.lifecycle.LiveData;
 import android.arch.persistence.room.ColumnInfo;
 import android.arch.persistence.room.Dao;
 import android.arch.persistence.room.Entity;
@@ -36,7 +37,7 @@ public class Word {
         void deleteAll();
 
         @Query("SELECT * FROM word_table ORDER BY word ASC")
-        List<Word> getAllWords();
+        LiveData<List<Word>> getAllWords();
 
     }
 }
